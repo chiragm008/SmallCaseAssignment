@@ -11,7 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb425d89-963e-4578-a8c2-3641f0dd7dc5" name="Default Changelist" comment="Briefly provide the written test cases">
-      <change afterPath="$PROJECT_DIR$/feature/test_UI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/test_UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature/test_UI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,18 +169,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="Briefly provide the written test cases" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1613920198650">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1613921817943">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1613920198650" />
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1613921817943" />
+    <state x="129" y="54" key="DiffContextDialog" timestamp="1613921763813">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="54" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1613921763813" />
     <state x="463" y="104" key="FileChooserDialogImpl" timestamp="1613919067729">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1613919067729" />
-    <state x="549" y="260" key="Github.ShareDialog" timestamp="1613919269236">
+    <state x="549" y="260" key="Github.ShareDialog" timestamp="1613922093646">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="549" y="260" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1613919269236" />
+    <state x="549" y="260" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1613922093646" />
+    <state x="453" y="61" key="Github.UntrackedFilesDialog" timestamp="1613922123626">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="453" y="61" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613922123626" />
     <state width="1344" height="217" key="GridCell.Tab.0.bottom" timestamp="1613920321661">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

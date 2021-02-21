@@ -2,7 +2,6 @@ import time
 from selenium import webdriver
 import pytest
 import json
-from selenium.webdriver.support.ui import Select
 from endpoint.EndPointFactory import EndPoint
 
 
@@ -23,7 +22,6 @@ def test_setup(config):
 
     if config['browser'] == 'chrome':
         driver = webdriver.Chrome(executable_path=path, options=chrome_opt)
-        #driver = webdriver.Chrome(r'C:\Users\mindfire\PycharmProjects\TopDocAssignment\drivers\chromedriver.exe')
     elif config['browser'] == 'ie':
         driver = webdriver.Ie(r'C:\Users\mindfire\PycharmProjects\TopDocAssignment\drivers\IEDriverServer.exe')
     else:
