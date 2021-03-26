@@ -2,9 +2,7 @@ import time
 from selenium import webdriver
 import pytest
 import json
-from endpoint.EndPointFactory import EndPoint
-from selenium.webdriver.support.ui import Select
-
+from endpoint.EndPointFactory import EndPoint, Flipkart, Amazon
 
 
 @pytest.fixture(scope='session')
@@ -14,68 +12,77 @@ def config():
     return data
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture()
 def test_setup(config):
     global driver
 
     chrome_opt = webdriver.ChromeOptions()
     chrome_opt.add_argument('--disable-gpu')
-    path = r'C:\Users\chiragm\PycharmProjects\TopDocProject\drivers\chromedriver.exe'
 
-    #if config['browser'] == 'chrome':
-    driver = webdriver.Chrome(r'C:\Users\chiragm\PycharmProjects\TopDocProject\drivers\chromedriver.exe')
-        #driver = webdriver.Chrome(executable_path=path, options=chrome_opt)
-    #elif config['browser'] == 'ie':
-        #driver = webdriver.Ie(r'C:\Users\mindfire\PycharmProjects\TopDocAssignment\drivers\IEDriverServer.exe')
-    #else:
-        #raise Exception(f'"{config["browser"]}" is not a supported browser')
+    if config['browser'] == 'chrome':
+        driver = webdriver.Chrome(r'C:\Users\chiragm\PycharmProjects\TopDocProject\drivers\chromedriver.exe')
+
 
     driver.implicitly_wait(config['wait_time'])
     driver.maximize_window()
     driver.get(EndPoint.BASE_URI_UI)
     driver.set_page_load_timeout(30)
     driver.implicitly_wait(config['wait_time'])
-    #time.sleep(7)
 
     yield
     time.sleep(1)
     driver.quit()
 
 
-def ttest_window(test_setup):
-    driver.find_element_by_xpath("//input[@id='txtName']").send_keys("chiragm")
-    driver.find_element_by_xpath("//input[@id='txtPassword']").send_keys("Change!900")
-    driver.find_element_by_xpath("//input[@id='btnLogin']").click()
-    driver.implicitly_wait(10)
-    driver.find_element_by_xpath("//a[@id='ucGPSMenu_hlnkNewStuffs']").click()
+def test_flipkart(test_setup):
+    driver.find_element_by_xpath(Flipkart.LoginPopupCancel).click()
+    driver.find_element_by_xpath(Flipkart.SearchTextBox).send_keys(EndPoint.ProductSearch)
+    driver.find_element_by_xpath(Flipkart.SearchButton).click()
+    driver.find_element_by_xpath(Flipkart.ProductLink).click()
     driver.switch_to.window(driver.window_handles[1])
-    driver.find_element_by_xpath("//tbody/tr[2]/td[1]/a[1]").click()
-    driver.switch_to.window(driver.window_handles[0])
-    driver.find_element_by_xpath("//body/form[@id='aspnetForm']/div[3]/div[1]/div[1]/div[1]/ul[1]/li[1]/a[1]").click()
-    driver.find_element_by_xpath("//a[@id='ucGPSMenu_lnkLogout']").click()
-
-def ttest_iframe(test_setup):
-    driver.find_element_by_xpath("//input[@id='inputServer']").clear()
-    driver.find_element_by_xpath("//input[@id='inputServer']").send_keys("vavpr-ssosrv-01.curaspan.local")
-    driver.find_element_by_xpath("//input[@id='loadPresetData']").click()
-    driver.find_element_by_xpath("//body/div[1]/form[1]/div[1]/div[1]/div[2]/div[4]/div[2]/div[1]/input[1]").click()
-    driver.switch_to.window(driver.window_handles[1])
-    driver.find_element_by_xpath("//body/div[1]/div[3]/form[2]/input[5]").click()
+    price = driver.find_element_by_xpath(Flipkart.ProductPrice).text
+    print("\nPrice of the product in Flipkart is: ",price)
+    driver.find_element_by_xpath(Flipkart.AddToCartButton).click()
     driver.implicitly_wait(10)
-    driver.switch_to.frame("ssoIframe")
-    #driver.find_element_by_id("btn_cancel_referral").is_enabled()
-    driver.switch_to.default_content()
-
-def test_alert(test_setup):
     time.sleep(5)
-    driver.implicitly_wait(5)
-    data = driver.switch_to.alert
-    print(data.text)
-    data.send_keys("dev")
-    data.accept()
-    data.dismiss()
+    #element = driver.find_element_by_xpath(Flipkart.CartAddQuantity)
+    #webdriver.ActionChains(driver).move_to_element(element).click(element).perform()
+    driver.find_element_by_xpath(Flipkart.CartAddQuantity).click()
+    time.sleep(3)
+    totalprice = driver.find_element_by_xpath(Flipkart.CartTotalPrice).text
+    print("Total Cart value of Flipkart is: ",totalprice)
 
+def test_amazon(test_setup):
+    driver.find_element_by_xpath(Flipkart.LoginPopupCancel).click()
+    driver.find_element_by_xpath(Flipkart.SearchTextBox).send_keys(EndPoint.ProductSearch)
+    driver.find_element_by_xpath(Flipkart.SearchButton).click()
+    driver.find_element_by_xpath(Flipkart.ProductLink).click()
+    driver.switch_to.window(driver.window_handles[1])
+    price = driver.find_element_by_xpath(Flipkart.ProductPrice).text
+    print("\nPrice of the Product in Flipkart is: ",price)
+    driver.find_element_by_xpath(Flipkart.AddToCartButton).click()
+    driver.implicitly_wait(10)
+    time.sleep(3)
+    totalprice = driver.find_element_by_xpath(Flipkart.CartTotalPrice).text
+    print("Total Cart Value in Flipkart is: ",totalprice)
 
-
-
-
+    driver.execute_script("window.open('https://www.amazon.in/')")
+    driver.switch_to.window(driver.window_handles[2])
+    driver.find_element_by_xpath(Amazon.SearchTextBox).send_keys(EndPoint.ProductSearch)
+    driver.find_element_by_xpath(Amazon.SearchButton).click()
+    driver.find_element_by_xpath(Amazon.ProductLink).click()
+    driver.switch_to.window(driver.window_handles[3])
+    driver.implicitly_wait(10)
+    price2 = driver.find_element_by_xpath(Amazon.ProductPrice).text
+    print("Price of the product in Amazon is:",price2)
+    driver.find_element_by_xpath(Amazon.AddToCartButton).click()
+    driver.implicitly_wait(10)
+    time.sleep(3)
+    totalprice2 = driver.find_element_by_xpath(Amazon.CartTotalPrice).text
+    print("Total cart value in Amazon is:",totalprice2)
+    if totalprice > totalprice2:
+        print("Amazon gives cheaper product")
+    elif totalprice == totalprice2:
+        print("Both amazon and flipkart has same price")
+    else:
+        print("Flipkart gives cheaper product")

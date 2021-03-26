@@ -11,12 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb425d89-963e-4578-a8c2-3641f0dd7dc5" name="Default Changelist" comment="Briefly provide the written test cases">
-      <change beforePath="$PROJECT_DIR$/.idea/TopDocProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TopDocProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/endpoint/EndPointFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoint/EndPointFactory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature/report.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/feature/test_API.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature/test_API.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature/test_UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature/test_UI.py" afterDir="false" />
     </list>
