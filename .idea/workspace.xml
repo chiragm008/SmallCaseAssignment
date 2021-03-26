@@ -11,8 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb425d89-963e-4578-a8c2-3641f0dd7dc5" name="Default Changelist" comment="Briefly provide the written test cases">
+      <change beforePath="$PROJECT_DIR$/.idea/TopDocProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TopDocProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/endpoint/EndPointFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoint/EndPointFactory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/test_API.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature/test_API.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature/test_UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature/test_UI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,15 +44,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SmallCaseProject" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\chiragm\PycharmProjects" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mindfire\PycharmProjects\HybridALL\feature" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_ui">
+  <component name="RunManager" selected="Python tests.pytest in test_API.py">
     <configuration name="screen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TopDocProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -108,8 +116,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_ui" />
         <item itemvalue="Python tests.pytest in test_API.py" />
+        <item itemvalue="Python tests.pytest for test_ui" />
         <item itemvalue="Python.screen" />
       </list>
     </recent_temporary>
@@ -167,71 +175,5 @@
     <MESSAGE value="final commit" />
     <MESSAGE value="Briefly provide the written test cases" />
     <option name="LAST_COMMIT_MESSAGE" value="Briefly provide the written test cases" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1613921817943">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1613921817943" />
-    <state x="129" y="54" key="DiffContextDialog" timestamp="1613921763813">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="129" y="54" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1613921763813" />
-    <state x="463" y="104" key="FileChooserDialogImpl" timestamp="1613919067729">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1613919067729" />
-    <state x="549" y="260" key="Github.ShareDialog" timestamp="1613922093646">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="549" y="260" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1613922093646" />
-    <state x="453" y="61" key="Github.UntrackedFilesDialog" timestamp="1613922123626">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="453" y="61" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613922123626" />
-    <state width="1344" height="217" key="GridCell.Tab.0.bottom" timestamp="1613920321661">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1344" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1613920321661" />
-    <state width="1344" height="217" key="GridCell.Tab.0.center" timestamp="1613920321660">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1344" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1613920321660" />
-    <state width="1344" height="217" key="GridCell.Tab.0.left" timestamp="1613920321660">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1344" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1613920321660" />
-    <state width="1344" height="217" key="GridCell.Tab.0.right" timestamp="1613920321661">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1344" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1613920321661" />
-    <state width="1344" height="217" key="GridCell.Tab.1.bottom" timestamp="1613920321661">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1344" height="217" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1613920321661" />
-    <state width="1344" height="217" key="GridCell.Tab.1.center" timestamp="1613920321661">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1344" height="217" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1613920321661" />
-    <state width="1344" height="217" key="GridCell.Tab.1.left" timestamp="1613920321661">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1344" height="217" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1613920321661" />
-    <state width="1344" height="217" key="GridCell.Tab.1.right" timestamp="1613920321661">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1344" height="217" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1613920321661" />
-    <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613918934829">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1613918934829" />
-    <state x="447" y="244" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1613921706189">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="447" y="244" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613921706189" />
-    <state x="513" y="154" key="svn.repositoryBrowser" timestamp="1613919052849">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="513" y="154" key="svn.repositoryBrowser/0.0.1366.728@0.0.1366.728" timestamp="1613919052849" />
   </component>
 </project>
