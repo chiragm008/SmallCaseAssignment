@@ -3,6 +3,8 @@ from selenium import webdriver
 import pytest
 import json
 from endpoint.EndPointFactory import EndPoint, Flipkart, Amazon
+from re import sub
+from decimal import Decimal
 
 
 @pytest.fixture(scope='session')
@@ -45,9 +47,9 @@ def test_flipkart(test_setup):
     driver.find_element_by_xpath(Flipkart.AddToCartButton).click()
     driver.implicitly_wait(10)
     time.sleep(5)
-    #element = driver.find_element_by_xpath(Flipkart.CartAddQuantity)
-    #webdriver.ActionChains(driver).move_to_element(element).click(element).perform()
-    driver.find_element_by_xpath(Flipkart.CartAddQuantity).click()
+    element = driver.find_element_by_xpath(Flipkart.CartAddQuantity)
+    webdriver.ActionChains(driver).move_to_element(element).click(element).perform()
+    #driver.find_element_by_xpath(Flipkart.CartAddQuantity).click()
     time.sleep(3)
     totalprice = driver.find_element_by_xpath(Flipkart.CartTotalPrice).text
     print("Total Cart value of Flipkart is: ",totalprice)
@@ -80,9 +82,12 @@ def test_amazon(test_setup):
     time.sleep(3)
     totalprice2 = driver.find_element_by_xpath(Amazon.CartTotalPrice).text
     print("Total cart value in Amazon is:",totalprice2)
-    if totalprice > totalprice2:
+
+    flipkartPrice = Decimal(sub(r'[^\d.]', '', totalprice))
+    amazonPrice = Decimal(sub(r'[^\d.]', '', totalprice2))
+    if flipkartPrice > amazonPrice:
         print("Amazon gives cheaper product")
-    elif totalprice == totalprice2:
+    elif flipkartPrice == amazonPrice:
         print("Both amazon and flipkart has same price")
     else:
         print("Flipkart gives cheaper product")
